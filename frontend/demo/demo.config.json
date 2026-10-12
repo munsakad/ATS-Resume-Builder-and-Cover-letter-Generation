@@ -1,0 +1,17 @@
+{
+  "move": {
+    "app/resumes/[id]/ResumeWorkspace.tsx": "app/resumes/view/ResumeWorkspace.tsx"
+  },
+  "remove": [
+    "app/api",
+    "middleware.ts",
+    "app/resumes/[id]"
+  ],
+  "patch": [
+    {
+      "file": "app/resumes/new/page.tsx",
+      "find": "router.push(`/resumes/${body.id}`)",
+      "replace": "router.push(`/resumes/view?id=${body.id}`)"
+    }
+  ]
+}
